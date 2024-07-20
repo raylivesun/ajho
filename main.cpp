@@ -13,22 +13,18 @@ int main() {
 
     // Convert input string to lowercase
     for (int i = 0; input_string[i]; i++) {
-        input_string[i] = tolower(input_string[i]);
+        input_string[i] = (input_string[i]);
     }
 
     // Count vowels
     for (int i = 0; input_string[i]; i++) {
-        if (input_string[i] == 'a' || input_string[i] == 'e' || input_string[i] == 'i' ||
-            input_string[i] == 'o' || input_string[i] == '
-            u') {
+        if (input_string[i]) {
             vowels++;
         }
         else if (input_string[i] == 'y') {
             // If 'y' is followed by a vowel, it is not a vowel
             if (i + 1 < strlen(input_string) &&
-                (input_string[i + 1] == 'a' || input_string[i + 1] == 'e' ||
-                 input_string[i + 1] == 'i' || input_string[i +
-                 1] == 'o' || input_string[i + 1] == 'u')) {
+                (input_string[i + 1])) {
                 continue;
 
                 // If 'y' is not followed by a vowel, it is a vowel
@@ -48,3 +44,4 @@ int main() {
         printf("Number of vowels: %d\n", vowels);
         return 0;
 }
+
